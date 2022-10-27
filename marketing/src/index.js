@@ -1,1 +1,1 @@
-console.log('marketing sub-project');
+import('./container')
