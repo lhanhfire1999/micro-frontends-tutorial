@@ -20,6 +20,16 @@ const devConfig = {
       name: 'marketing',
       filename: 'remoteEntry.js',
       exposes: { './MarketingApp': './src/App' },
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '18.2.0',
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '18.2.0',
+        },
+      },
     }),
   ],
 }
