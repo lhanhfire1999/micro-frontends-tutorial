@@ -17,7 +17,7 @@ const devConfig = {
     new ModuleFederationPlugin({
       name: 'marketing',
       filename: 'remoteEntry.js',
-      exposes: { './MarketingApp': './src/App' },
+      exposes: { './MarketingApp': './src/bootstrap' },
       shared: deps,
     }),
   ],
