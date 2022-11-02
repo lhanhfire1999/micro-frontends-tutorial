@@ -1,9 +1,8 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { StylesProvider } from '@material-ui/core/styles'
 
-import { Landing, Pricing } from './components'
+import { Landing, Pricing } from './pages'
 
 const router = createBrowserRouter([
   {
@@ -16,19 +15,12 @@ const router = createBrowserRouter([
   },
 ])
 
-const mount = (el) => {
-  const root = createRoot(el)
-  root.render(
+const App = () => {
+  return (
     <StylesProvider>
       <RouterProvider router={router} />
     </StylesProvider>
   )
 }
 
-if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.querySelector('#_marketing-dev-root')
-
-  if (devRoot) mount(devRoot)
-}
-
-export { mount }
+export default App
